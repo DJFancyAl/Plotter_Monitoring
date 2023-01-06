@@ -43,3 +43,40 @@ This tool looks to see if the Chia blockchain is running. If the blockchain is n
 * Total farm capacity
 * Total balance of XCH Chia coin
 * If new Chia coin has been added to the wallet
+
+## Configuration
+
+The __Plotter Monitor__ package requires some basic configuration to work for the individual user. Additionally, it provides some options that customize the usage of tools. Settings and configuration are handled in a _config.yaml_ file. To create this file - copy the _config.yaml.default_ file and then rename it to _config.yaml_ for user configuration. *DO NOT MAKE CHANGES TO THE DEFAULT FILE. ONLY MAKE CHANGES TO YOUR NEW CONFIG FILE*
+
+Once you have created the new configuration file, you may begin changing parameters to suit your needs. Here are descriptions of the necessary and unnecessary parameters:
+
+### Notifications
+
+Notifications are sent to Discord webhooks. You may use the same webhook for multiple parameters, or different ones based on how you would like notifications delivered.
+
+* __system_webhook__ - The Discord webhook where notifications where "System Monitoring" notifications will sent.
+* __plotter_webhook__ - The Discord webhook where notifications where "Plotter Monitoring" notifications will sent.
+* __miner_webhook_true__ - The Discord webhook where notifications where "Miner Monitoring" notifications will sent if recurring notifications are set.
+* __miner_webhook_false__ - The Discord webhook where notifications where "Miner Monitoring" notifications will sent only if the miner is not running.
+
+### System Parameters
+
+Use these settings to confugire how the system monitor runs. You may need to change these parameters several times to find the threshhold which works best for you.
+
+* __always_notify__ - If False - it will only notify if a mining process is not running.
+* __hpool_path__ - The folder where your HPOOL Miner is located. - __MUST BE SET.__ Example: _C:\Users\CurrentUser\Documents\HPool-Miner-chia-v1.4.1-0-windows_
+* __chia_path__ - The folder where your Chia.exe is located. - __MUST BE SET.__ Example: _C:\Users\CurrentUser\AppData\Local\chia-blockchain\app-1.2.2\resources\app.asar.unpacked\daemon_
+
+### Plotting Parameters
+
+Use this setting to configure how the plotter monitor runs.
+
+* __pslog_path__ - The folder where the PSChiaPlotter logs are located - __MUST BE SET.__  Example: _C:\Users\CurrentUser\.chia\mainnet\plotter_
+
+### Miner Parameters
+
+Use these settings to configure how the miner monitor runs.
+
+* __always_notify__ - If False - it will only notify if a mining process is not running.
+* __hpool_path__ - The folder where your HPOOL Miner is located. - __MUST BE SET.__ Example: _C:\Users\CurrentUser\Documents\HPool-Miner-chia-v1.4.1-0-windows_
+* __chia_path__ - The folder where your Chia.exe is located. - __MUST BE SET.__ Example: _C:\Users\CurrentUser\AppData\Local\chia-blockchain\app-1.2.2\resources\app.asar.unpacked\daemon_
