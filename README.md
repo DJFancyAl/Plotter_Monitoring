@@ -14,7 +14,9 @@ We'll describe each of these tools below, as well as how to configure them.
 
 ## Usage
 
+This toolkit has been designed to be used to suit the needs of the individual user. The user can use any of the tools below as often or inoften as they would like to suit their needs. They may choose to not use the tools at all - especially after the plotting process has completed. To avoid using machine resources, especially during the plotting process, the __"Plotter Monitoring"__ package does not require a process to always be running.
 
+The user should use _Windows task manager_ (or a similar scheduling application) to run each of the tools below on a schedule. Using this method allows you to schedule each tool to run hourly, daily, weekly, or on any other cycle you choose!
 
 ## Tools
 
