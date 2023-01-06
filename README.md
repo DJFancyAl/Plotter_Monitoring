@@ -63,9 +63,11 @@ Notifications are sent to Discord webhooks. You may use the same webhook for mul
 
 Use these settings to confugire how the system monitor runs. You may need to change these parameters several times to find the threshhold which works best for you.
 
-* __always_notify__ - If False - it will only notify if a mining process is not running.
-* __hpool_path__ - The folder where your HPOOL Miner is located. - __MUST BE SET.__ Example: _C:\Users\CurrentUser\Documents\HPool-Miner-chia-v1.4.1-0-windows_
-* __chia_path__ - The folder where your Chia.exe is located. - __MUST BE SET.__ Example: _C:\Users\CurrentUser\AppData\Local\chia-blockchain\app-1.2.2\resources\app.asar.unpacked\daemon_
+* __always_notify__ - If False - it will only notify the plot manager is not running or a threshhold is broken.
+* __cpu_high__ - Will notify if it exceeds this threshhold (in percent)
+* __cpu_low__ - Will notify if below this threshhold (in percent)
+* __ram_high__ - Will notify if it exceeds this threshhold (in percent)
+* __ram_low__ - Will notify if below this threshhold (in percent)
 
 ### Plotting Parameters
 
